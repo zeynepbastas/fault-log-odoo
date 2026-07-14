@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- A handful of sample res.city records so the City dropdown isn't empty out of the box.
+         base_address_extended ships the model but no data. -->
+
+    <record id="city_us_new_york" model="res.city">
+        <field name="name">New York</field>
+        <field name="country_id" ref="base.us"/>
+    </record>
+    <record id="city_us_los_angeles" model="res.city">
+        <field name="name">Los Angeles</field>
+        <field name="country_id" ref="base.us"/>
+    </record>
+    <record id="city_us_chicago" model="res.city">
+        <field name="name">Chicago</field>
+        <field name="country_id" ref="base.us"/>
+    </record>
+
+    <record id="city_uk_london" model="res.city">
+        <field name="name">London</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+    <record id="city_uk_manchester" model="res.city">
+        <field name="name">Manchester</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+    <record id="city_uk_liverpool" model="res.city">
+        <field name="name">Liverpool</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+
+    <record id="city_de_berlin" model="res.city">
+        <field name="name">Berlin</field>
+        <field name="country_id" ref="base.de"/>
+    </record>
+    <record id="city_de_munich" model="res.city">
+        <field name="name">Munich</field>
+        <field name="country_id" ref="base.de"/>
+    </record>
+
+    <record id="city_es_madrid" model="res.city">
+        <field name="name">Madrid</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="city_es_barcelona" model="res.city">
+        <field name="name">Barcelona</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+</odoo>

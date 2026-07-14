@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="football_team_view_list" model="ir.ui.view">
+        <field name="name">football.team.list</field>
+        <field name="model">football.team</field>
+        <field name="arch" type="xml">
+            <list string="Teams">
+                <field name="name"/>
+                <field name="country_id"/>
+                <field name="city_id"/>
+                <field name="founded_year"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="football_team_view_form" model="ir.ui.view">
+        <field name="name">football.team.form</field>
+        <field name="model">football.team</field>
+        <field name="arch" type="xml">
+            <form string="Team">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. FC Riverside"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="country_id"/>
+                        <field name="city_id" options="{'no_create': True}"/>
+                        <field name="founded_year"/>
+                    </group>
+                    <notebook>
+                        <page string="Players" name="players">
+                            <field name="player_ids">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="position"/>
+                                    <field name="jersey_number"/>
+                                    <field name="age"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="football_team_action" model="ir.actions.act_window">
+        <field name="name">Teams</field>
+        <field name="res_model">football.team</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add your first team
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="football_manager_menu_root"
+              name="Football Manager"
+              sequence="91"/>
+
+    <menuitem id="football_team_menu"
+              name="Teams"
+              parent="football_manager_menu_root"
+              action="football_team_action"
+              sequence="10"/>
+
+    <menuitem id="football_player_menu"
+              name="Players"
+              parent="football_manager_menu_root"
+              action="football_player_action"
+              sequence="20"/>
+
+</odoo>
