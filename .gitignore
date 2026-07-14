@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor/OS cruft
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Odoo runtime artifacts (in case you ever run odoo-bin with a config pointing here)
+*.log
+.odoo.conf
+odoo.conf
