@@ -5,7 +5,7 @@ A collection of small custom Odoo 19.0 modules, built as learning exercises to p
 ## Modules
 
 - [`fault_log/`](fault_log/README.md) — log and track equipment/machine faults
-- [`football_manager/`](football_manager/README.md) — teams and players, with Many2one/One2many and country→city relational fields
+- [`football_manager/`](football_manager/README.md) — teams and players, with Many2one/One2many and country→state relational fields
 
 See each module's own README for its fields, dependencies, and install/upgrade command.
 

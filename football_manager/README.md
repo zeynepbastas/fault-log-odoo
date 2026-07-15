@@ -5,17 +5,17 @@ A small custom Odoo 19.0 module for managing football teams and players — buil
 ## Features
 
 - Team form shows its players inline via a One2many field (`player_ids`) — add/edit players directly from the team without leaving the form
-- Picking a Team's Country narrows the City dropdown to that country's cities (`res.city`, domain on `country_id`)
+- Picking a Team's Country narrows the State dropdown to that country's states/provinces (`res.country.state`, domain on `country_id`)
 
 ## Model: `football.team`
 
-| Field          | Type      | Notes                                          |
-|----------------|-----------|--------------------------------------------------|
-| `name`         | Char      | Required                                        |
-| `country_id`   | Many2one  | `res.country`                                   |
-| `city_id`      | Many2one  | `res.city`, domain-filtered by `country_id`     |
-| `founded_year` | Integer   |                                                  |
-| `player_ids`   | One2many  | Inverse of `football.player.team_id`            |
+| Field          | Type      | Notes                                              |
+|----------------|-----------|-------------------------------------------------------|
+| `name`         | Char      | Required                                            |
+| `country_id`   | Many2one  | `res.country`                                       |
+| `state_id`     | Many2one  | `res.country.state`, domain-filtered by `country_id`|
+| `founded_year` | Integer   |                                                      |
+| `player_ids`   | One2many  | Inverse of `football.player.team_id`                |
 
 ## Model: `football.player`
 
@@ -36,8 +36,8 @@ A small custom Odoo 19.0 module for managing football teams and players — buil
 ## Requirements
 
 - Odoo 19.0
-- Depends on the core `base_address_extended` module (provides `res.city`)
-- Ships a small seed of sample cities for US/UK/Germany/Spain (`data/football_city_data.xml`), since `base_address_extended` provides the model but no data itself
+- Depends only on core `base` (`res.country.state` ships with it — no extra dependency needed)
+- Note: many countries have zero states in Odoo's data (e.g. Monaco, Singapore) — an empty State dropdown for those is expected, not a bug
 
 ## Installation
 

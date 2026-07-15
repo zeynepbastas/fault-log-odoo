@@ -8,7 +8,7 @@
             <list string="Teams">
                 <field name="name"/>
                 <field name="country_id"/>
-                <field name="city_id"/>
+                <field name="state_id"/>
                 <field name="founded_year"/>
             </list>
         </field>
@@ -28,7 +28,7 @@
                     </div>
                     <group>
                         <field name="country_id"/>
-                        <field name="city_id" options="{'no_create': True}"/>
+                        <field name="state_id" options="{'no_create': True}"/>
                         <field name="founded_year"/>
                     </group>
                     <notebook>
